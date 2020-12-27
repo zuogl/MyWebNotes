@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+
+
+
+    <script>
+        // 数组的合并
+        let arr1 = [852, 235, 456]
+        let arr2 = [4854, 46, 741]
+
+        let arr3 = [...arr1, ...arr2]
+        console.log(arr3);
+
+        // 2. 新数组克隆
+
+        let arr4 = [...arr3]
+        console.log(arr4);
+
+
+        // 3. 将维数组转为真正的数组
+        let divs = [...document.querySelectorAll('div')]
+        console.log(divs);
+
+
+    </script>
+</body>
+
+</html>

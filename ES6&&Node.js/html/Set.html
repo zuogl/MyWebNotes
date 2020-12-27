@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>集合</title>
+</head>
+<body>
+    <script>
+        //声明集合
+		
+		let obj = {
+			name:'xiaozuo',
+			skill(){
+				console.log('学习能力超强的')
+			}
+		}
+  //       let s = new Set({name:'xiaozuo'});
+		// console.log(s);//Uncaught TypeError: undefined is not a function
+		// let s1 = new Set('我是字符串呀')
+		// console.log(s1);//Set(6) {"我", "是", "字", "符", "串", …}
+		// let s2 = new Set([])
+		// console.log(s2);//Set(0) {}
+		// let s3 = new Set(true)
+		// console.log(s3);//Uncaught TypeError: undefined is not a function
+		// let s4 = new Set(null)
+		// console.log(s4);//Set(0) {}
+		// let s5 = new Set(undefined)
+		// console.log(s5);//Set(0) {}
+		// let s6 = new Set(741)
+		// console.log(s6);//Uncaught TypeError: undefined is not a function
+        let s7 = new Set([{name:'xiaozuo'},obj,[1,2,6],'我是字符串呀']);
+		// console.log(s7)
+
+       // //  //1. 元素个数
+       // //  console.log(s2.size);
+       // //  //2. 添加
+       console.log( s7.add(4));
+       // //  //3. 删除
+       //  // console.log(s7.delete(4));
+       // //  //4. 检测集合中是否包含某个元素  has  
+       //  console.log(s7.has(obj));
+       //  //5. 清空
+       //  // s2.clear();
+       //  //6. for...of 遍历
+        for(let v of s7){
+            console.log(v);
+        }
+       //  // console.log(s2);
+        //7. 扩展运算符 
+        let arr = [...s7];
+		console.log(arr)
+
+
+
+    </script>
+</body>
+</html>

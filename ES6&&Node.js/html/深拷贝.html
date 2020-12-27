@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        function getDataType(data) {
+            return Object.prototype.toString.call(data).slice(8, -1);
+        }
+
+        //声明一个函数用来复制目标数据
+        function deepClone(data) {
+            //判断目标数据是什么类型
+            let type = getDataType(data);
+            //初始化容器
+            let container;
+            //如果数据类型为对象
+            if (type === 'Object') {
+                container = {};
+            }
+            //如果数据类型为数组
+            if (type === 'Array') {
+                container = [];
+            }
+            //成员复制  遍历
+            for (let i in data) {
+                //对键值类型进行判断
+                let type = getDataType(data[i]);
+                //判断
+                if (type === 'Object' || type === 'Array') {
+                    //递归调用 deepClone 函数
+                    let result = deepClone(data[i]);
+                    container[i] = result;
+                } else {
+                    container[i] = data[i];
+                }
+            }
+            //返回新创建的数据
+            return container;
+        }
+
+
+        let message = {
+            name: '小左呀',
+            height: 175,
+            hobby: ['爬山', '武术', '看电影', '阅读'],
+            skills(){
+                console.log('超强的学习能力')
+            }
+        }
+
+        //进行克隆
+        const result = deepClone(message);
+        result.hobby[0]= '旅游';
+        console.log(message);
+        console.log(result);
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        const fn3 = (a, b) => {
+            console.log('haha');
+            return a + b;
+        }
+            // 箭头函数的特点：
+
+            // 1.箭头函数的this指向其外层作用域的this值
+
+            const obj = { name: 'xiaozuo' };
+
+            function fn1() {
+                console.log(this); // 第一个 this
+                return () => {
+                    console.log(this); // 第二个 this
+                };
+            }
+
+            const fn2 = fn1.call(obj);
+            fn2();
+
+            // 2. 不能作为构造函数使用
+            let XX = ()=>{
+            }
+            let res = new XX() //Uncaught TypeError: XX is not a constructorUncaught TypeError: XX is not a constructor
+            // 3. 不能使用arguments
+            let fn = () =>{
+                console.log(arguments);
+            }
+            fn(1,2,3,4,5) //Uncaught ReferenceError: arguments is not defined
+            // 4. 箭头函数可以简写
+            //     - 只有一个参数时，可以不写小括号
+            let fn = a => { }
+            //     - 只有一条函数体时，可以不写花括号和return
+            let fn4 = a => '我是return的a'
+
+
+    </script>
+
+</body>
+
+</html>

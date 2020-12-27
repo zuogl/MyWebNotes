@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 打开数组 将 [1,2,3] 变为 1,2,3
+        let arr1 = [1, 23, 56]
+        let arr2 = [444, 666, 888]
+
+        let arr3 = [...arr1, ...arr2]
+        console.log(arr3);
+
+        // 打开对象， 只保留属性键值对
+        const o1 = {
+            a: 10
+        }
+
+        const o2 = {
+            b: 2
+        }
+
+
+        const o3 = {
+            c: 20
+        }
+
+        console.log({ ...o1, ...o2, ...o3 });
+
+
+    </script>
+
+
+
+</body>
+
+</html>

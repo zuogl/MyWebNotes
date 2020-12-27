@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>对象扩展</title>
+</head>
+<body>
+    <script>
+        //1. 判断两个值是否完全相等   NaN === NaN
+        // console.log(Object.is(1, '1'));
+        // console.log(Object.is(200, 200));
+        // console.log(Object.is(NaN, NaN));
+
+        //2. Object.assign 对象的合并  
+        // const obj1 = {
+        //     a:100,
+        //     b:200
+        // }
+        // const obj2 = {
+        //     c: 300,
+        //     d: 400,
+        //     a: 500
+        // }
+        // const obj3 = {
+        //     e: 600,
+        //     f: 700,
+        //     a: 800
+        // }
+        // const result = Object.assign(obj1, obj2, obj3);
+        // console.log(result === obj1);
+        // console.log(obj1);
+        
+  //       //3. 直接修改 __proto__ 设置原型  Object.create 设置元素   使用类实例化对象实现继承
+  //       let obj1 = {
+  //           a:100,
+  //           b:200
+  //       }
+  //       let obj2 = {
+  //           c: 300,
+  //           d: 400
+  //       }
+  //       obj2.__proto__ = obj1;
+  //       console.log(obj2);
+		
+		
+		
+		// const obj1 ={
+		//     a :100,
+		//     b:200
+		// }
+		
+		// const obj2 = {
+		//     c:300,
+		//     d:400
+		// }
+		
+		// const obj3 = {
+		//     e:300,
+		//     f:400
+		// }
+		// Object.assign(obj1,obj2,obj3)
+		// console.log(obj1);//
+		
+		
+
+    </script>
+</body>
+</html>

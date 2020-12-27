@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+
+
+        // cnst 声明的特点
+        // 1. 声明时一定要赋值
+
+        // const A;//Uncaught SyntaxError: Missing initializer in const declaration
+        // 2. 常年的名称一般全大写（约定成熟）
+        // const ABCD = 13;
+        // 3. 不能修改常量的值
+        // const MYCAR = 'CX-4';
+        // MYCAR = 'BMW';//Uncaught TypeError: Assignment to constant variable.
+        // 4. 不允许重复声明
+        // const MYCAR = 'BMW';//Uncaught SyntaxError: Identifier 'MYCAR' has already been declared
+        // // 5. 块级作用域
+        // {
+        //     const HOUSE = '1000 MERTERS'
+        // }
+        // console.log(HOUSE);//Uncaught ReferenceError: HOUSE is not defined
+        // 6. 数组对象的内部数据修改不影响
+
+        const FAMILY = ['father', 'mother', 'son', 'dauther']
+        FAMILY.push('PET')
+        console.log(FAMILY);
+
+        // const dengchao = {
+        //     name: '邓超',
+        //     tages: ['搞笑', '逗比']
+        // }
+        // dengchao.name = 'DC'
+        // console.log(dengchao);
+
+
+    </script>
+
+</body>
+
+</html>

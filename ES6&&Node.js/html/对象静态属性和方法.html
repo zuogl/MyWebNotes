@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>静态成员</title>
+</head>
+<body>
+    <script>
+        //属于类的成员 称之为静态成员
+        // function Phone(){ }
+        // //添加成员(属性)
+        // Phone.name = '手机';
+        // Phone.change = function(){
+        //     console.log('改变了世界');
+        // }
+        // let xiaomi = new Phone();
+        // console.log(xiaomi.name);
+        // xiaomi.change();
+        // console.dir(Phone);
+
+        // //类
+        // class Phone{
+        //     //静态成员
+        //     static name = '手机';
+        //     static change = function(){
+        //         console.log('改变了世界');
+        //     }
+        // }
+
+        // // console.dir(Phone);
+        // //实例化对象
+        // const smartisan = new Phone();
+        // console.log(smartisan.name);
+		
+		
+		function Phone (){
+		    <!-- 添加成员 -->
+		    Phone.name = '手机'
+		    Phone.change = function(){
+		        console.log('change the world')
+		    }
+		}
+		console.log(Phone);
+		let xiaomi =  new Phone();
+		console.log(xiaomi)
+		xiaomi.change()
+		
+		
+		
+    </script>
+</body>
+</html>

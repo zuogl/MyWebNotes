@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            border: solid 1px red;
+        }
+    </style>
+</head>
+
+<body>
+    <div id='ad'></div>
+    <script>
+
+        // 箭头函数中this指向外层作用域中的this值
+        let div = document.querySelector('#ad')
+        div.onclick = function () {
+            setTimeout(
+                () => {
+                    this.style.background = 'pink'
+                }, 2000
+            )
+        }
+
+
+
+        let arr = [1, 3, 5, 7, 9, 28, 30, 60, 33, 46, 67]
+        // filter方法：返回数组分钟复合条件的值
+        var result = arr.filter(item => item % 2 == 0)
+
+        console.log(result);
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

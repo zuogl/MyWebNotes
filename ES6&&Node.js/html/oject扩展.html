@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var car = {
+            name :'汽车'
+        }
+        var geely = Object.create(car,{
+            brand:{
+                value:'星越',
+                writable:false,
+                configurable:false,
+                enumerable:false
+            },
+            price:{
+                get:function(){
+                    return 2800000
+                },
+                set:function(v){
+                    console.log('price的价格被修改成了'+ v)
+                }
+            }
+
+        })
+        console.log(geely.price);//2800000
+        console.log(geely);//{brand:星越
+
+        Object.defineProperties(geely,{
+            enginer:{
+                get:() => '7DCT4缸发动机'
+            },
+            configer:{
+              set:(a)=>{
+                  console.log('我的配置有'+ a)
+              }
+            }
+        })
+
+        geely.configer = '天窗、中控大屏' //我的配置有天窗、中控大屏
+        console.log(geely.enginer);//7DCT4缸发动机
+
+
+    </script>
+</body>
+</html>

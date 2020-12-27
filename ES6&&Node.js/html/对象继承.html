@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>对象继承</title>
+</head>
+<body>
+    <script>
+        //父类的声明
+        class Phone{
+            constructor(brand,price){
+                this.brand = brand;
+                this.price = price;
+            }
+            //添加父类的方法
+            call(){
+                console.log('打电话');
+            }
+            sendMessage(){
+                console.log('发短信');
+            }
+        }
+
+        //子类的声明  extends 继承 
+        class SmartPhone extends Phone{
+            //构造方法
+            constructor(brand, price, pixel, screen){
+                //调用父类的方法
+                super(brand, price);
+                //初始化子类的成员
+                this.pixel = pixel;
+                this.screen = screen;
+            }
+            //方法 
+            playGame(){
+                console.log('我可以用来玩游戏');
+            }
+
+            takePhoto(){
+                console.log('我可以用来拍照');
+            }
+        }
+
+        //实例化对象
+        const oppo = new SmartPhone('oppo', 2699, '1000w', '5inch');
+
+        console.log(oppo);
+		console.dir(SmartPhone)
+		
+		
+		
+		
+		
+    </script>
+</body>
+</html>

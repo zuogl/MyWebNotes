@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // {
+        //     let arr = [1, 2, 3, 4]
+        //     let result = arr
+        //     result[0] = 100;
+        //     console.log(arr);//[100,2,3,4]
+        //     console.log(result);//[100,2,3,4]
+        // }
+
+
+        // {
+        //     // 2. 数组的concat方法
+        //     let arr = [{ name: 'xiaozuo' }, 2, 3, 4]
+        //     let result1 = [].concat(arr)
+        //     result1[0].name = 'xiaoyou';
+        //     console.log(arr);//[{name:'xiaoyou'},2,3,4]
+        //     console.log(result1);//[{name:'xiaoyou'},2,3,4]
+        // }
+
+        // {
+        //     // 3. 数组的slice方法
+        //     let arr = [{ name: 'xiaozuo' }, 2, 3, 4]
+        //     let result2 = arr.slice(0)
+        //     result2[0].name = 'xiaoyou';
+        //     console.log(arr);//[{name:'xiaoyou'},2,3,4]
+        //     console.log(result2);//[{name:'xiaoyou'},2,3,4]
+        // }
+
+        // {
+        //     // 4. 扩展运算符...方法
+        //     let arr = [{ name: 'xiaozuo' }, 2, 3, 4]
+        //     let result3 = [...arr]
+        //     result3[0].name = 'xiaoyou';
+        //     console.log(arr);//[{name:'xiaoyou'},2,3,4]
+        //     console.log(result3);//[{name:'xiaoyou'},2,3,4]
+        // }
+
+
+
+{
+    let message = {
+    name :'小左呀',
+    height:175,
+    hobby:['爬山','武术','看电影','阅读']
+}
+
+let result = Object.assign({},message)
+
+result.hobby[0] = '旅游'
+console.log(message)
+console.log(result)
+}
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

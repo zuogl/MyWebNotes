@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>对象继承</title>
+</head>
+<body>
+    <script>
+        //父类
+        function Phone(brand, price){
+            this.brand = brand;
+            this.price = price;
+        }
+        //添加方法
+        Phone.prototype.call = function(){
+            console.log('打电话');
+        }
+        Phone.prototype.sendMessage = function(){
+            console.log('发短信');
+        }
+
+        //子类 智能手机
+        function SmartPhone(brand, price, pixel, screen){
+            //调用父类的构造方法
+            Phone.call(this, brand, price);
+            //子类属性初始化
+            this.pixel = pixel;
+            this.screen= screen;
+        }
+
+        //子类的原型应该执行父类的实例
+        SmartPhone.prototype = new Phone();
+        SmartPhone.prototype.constructor = SmartPhone;
+        //子类的方法创建
+        SmartPhone.prototype.playGame = function(){
+            console.log('可以用来玩游戏');
+        }
+
+        //实例化
+        let onePlus = new SmartPhone('1+', 3899, '1亿', '6inch');
+
+        console.log(onePlus);
+
+    </script>
+</body>
+</html>

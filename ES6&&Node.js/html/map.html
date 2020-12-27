@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        //声明 Map    缓存
+        let m = new Map();
+        // console.log(m, typeof m); 
+        //添加元素
+        m.set('name', 'xiaozuo');
+        let key = { name: '小左' };
+        m.set(key, {
+            hobby: '爬山',
+            height: 175
+        });
+        console.log(m)
+
+        //获取元素
+        // console.log(m.get('name'));
+        // console.log(m.get(key));
+        //删除元素
+        // m.delete('name');
+        // console.log(m);
+        //检测
+        // console.log(m.has('namex'));
+        //元素个数
+        // console.log(m.size);
+        //清空
+        // m.clear();
+        // console.log(m);
+
+        for (let v of m) {
+            console.log(v);
+        }
+
+
+    </script>
+
+</body>
+
+</html>

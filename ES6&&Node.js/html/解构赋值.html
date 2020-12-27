@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+        const FAMILY = ['mother', 'father', 'son', 'dauther']
+        let [F, M, S, D] = FAMILY
+        console.log(F); //mother
+        console.log(M);//father
+        console.log(S);///son
+        console.log(D);//dauther
+
+
+        const lilianji = {
+            name: '李连杰',
+            tags: ['功夫', '柔情', '武术'],
+            act: function () {
+                console.log('功夫皇帝');
+            }
+        }
+
+
+        
+        let { name, act, tags: [gong, rou, wu] } = lilianji
+        console.log(name);//'李连杰'
+        console.log(act);//f(){console.log('功夫皇帝');}
+        console.log(gong);//'功夫'
+        console.log(rou);//'柔情'
+        console.log(wu);//'武术'
+
+
+
+
+    </script>
+
+</body>
+
+</html>
