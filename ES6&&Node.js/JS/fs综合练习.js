@@ -1,13 +1,17 @@
 // 命令总结
-// fs.readFile()
-// fs.createReadStream()
-// fs.writeFile()
-// fs.createWriteStream()
-// fs.readdir()
-// fs.rename()
-// fs.unlink()
-// fs.mkdir()
-// fs.rmdir()
+// fs.readFile(file,callback)
+// fs.createReadStream(file)
+// rs.on('data',chunk =>{
+//     console.log(chunk);
+// })
+// fs.writeFile(file,data[,option],callback)
+// fs.createWriteStream('file')
+// ws.write()
+// fs.readdir(file,callback(err,data))
+// fs.rename(file,targetfile,callback)
+// fs.unlink(file,callback)
+// fs.mkdir(file,callback)
+// fs.rmdir(file,callback)
 
 
 // 在D盘下，按以下要求创建文件/夹。
