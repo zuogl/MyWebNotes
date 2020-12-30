@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        td {
+            width: 200px;
+        }
+
+        tr {
+            height: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+
+
+        <script>
+            window.onload = function () {
+                function randomColor() {
+                    let r = parseInt(Math.random() * 256);
+                    let g = parseInt(Math.random() * 256);
+                    let b = parseInt(Math.random() * 256);
+                    return (r + ',' + g + ',' + b)
+                }
+                var trlist = document.querySelectorAll('tr')
+                for (var i = 0; i < trlist.length; i++) {
+                    let col = randomColor()
+                    trlist[i].style.background = 'rgb' + '(' + col + ')';
+                    // trlist[i].innerHTML = i
+                }
+            }
+            
+        </script>
+    </table>
+</body>
+
+</html>

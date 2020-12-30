@@ -248,6 +248,20 @@ require('http')
 })
 ```
 
+## get和post的区别
+- get主要用来获取数据，post主要用来提交数据
+- get带参数请是将参数后缀到URL中，在地址栏输入url访问网站就是get请求，post带- 参数请求是将参数放到请求体中
+- post请求相对get安全一些，因为浏览器中的参数会暴露在地址栏中
+- get请求大小有限制，一般为2k,而post请求则没有大小限制
+- get类型报文请求方法的位置为get，post类型报文请求方法为post
+
+## 根据请求路径，获取文件路径
+```js
+let pathname = url.parse(request.url,true).pathname;
+// __dirname是当前文件所在位置的绝对路径
+let dir = __dirname + '这儿是你期望浏览器去哪个文件夹下获取资源（要注意这个位置和当前文件的相对路径关系）'
+let filepath = dir + pathname
+```
 ## 附录
 
 ### 响应状态码
@@ -284,3 +298,6 @@ favicon.ico 用于获取当前网站的小图标
 #### Sec-Fetch-* 请求头
 
 <https://www.w3.org/TR/fetch-metadata/#sec-fetch-mode-header>
+
+
+<h2 style = "color:red">http是nodejs搭建服务端中很关键的一环。请仔细练习js文件夹中的http文件！！！</h2>
