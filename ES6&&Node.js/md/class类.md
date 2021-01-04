@@ -132,6 +132,7 @@ console.log(onePlus)
 在用class类实现继承时，具有如下几个关键字：
 `extends`:可以继承来自父类的方法。并自动将子类的显示原型对象上的constructor属性指向了子类自身。
 `super`:可以继承来自父类的属性
+
 ```js
 // 定义父类
 class Phone{
@@ -147,7 +148,6 @@ class Phone{
         console.log('发短信')
     }
 }
-
 // 定义子类
 class SmartPhone extends Phone{
     // 构造方法 
@@ -158,7 +158,6 @@ class SmartPhone extends Phone{
         this.pixel = pixel;
         this.screen = screen;
     }
-
     //  给子类添加自己的方法
     playGame(){
         console.log('我可以玩游戏')
@@ -168,7 +167,6 @@ class SmartPhone extends Phone{
         console.log('我可以拍照')
     }
 }
-
 //  实例化对象
 const oppo = new SmartPhone('oppo',2699,1000,5.0)
 ```
@@ -190,7 +188,6 @@ const oppo = new SmartPhone('oppo',2699,1000,5.0)
             // 将新的属性保存在当前对象中
             this.jiage = v //如果在这儿用this.price的话，会形成死循环，无限递归
         }
-
         // 静态成员也可以使用getter和setter
         static get color(){
             return this.yanse
@@ -199,7 +196,6 @@ const oppo = new SmartPhone('oppo',2699,1000,5.0)
         static set color(v){
             this.yanse = v
         }
-
         // 实例对象方法
         getInfo(){
             // 获取当前对象的颜色和价格，this指向的是实例对象
@@ -207,7 +203,6 @@ const oppo = new SmartPhone('oppo',2699,1000,5.0)
 
         }
     }
-
     const lenovo = new Computer()
     // 获取lenovo的price属性
     console.log(lenovo.price);//undefined

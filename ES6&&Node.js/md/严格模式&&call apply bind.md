@@ -50,13 +50,6 @@ PS：如果浏览器不支持，则这句话只解析为一条简单的语句, �
 -  新增一些保留字, 如: implements interface private protected public
 
 
-直接在一个对象上定义新的属性或修改现有属性，并返回该对象。
-```js
-    Object.defineProperties(object, descriptors)
-    object:要操作的对象
-    descriptors:新增的描述对象
-```
-
 ## 二、call apply和bind
 * call 方法使用一个指定的 this 值和单独给出的一个或多个参数来调用一个函数
 

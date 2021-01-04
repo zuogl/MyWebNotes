@@ -34,7 +34,7 @@
                 - w 保存文件
                 - q 退出vim模式
                 - wq 同时输入,保存并退出vim模式
-                - q!不保存突出vim模式
+                - q!不保存退出vim模式
 2. 小技巧
     - 上下方向键，可以查看历史命令，并配合回车，快速输入已经输入过的命令
     - ctrl + c 取消命令
@@ -49,7 +49,7 @@
     - 代码备份
     - 版本回退
     - 协作开发
-    - 权限开发
+    - 权限控制
 
 2. 安装git
 - 在官网（https://git-scm.com/downloads） 下载对应的版本，进行默认安装。安装成功后会在菜单栏出现Git Base。双击出现类似如下图标：![](../img/安装成功提示.png)
@@ -89,18 +89,19 @@
                 - 忽略当前文件夹下特定的文件
                     - /4.test
 
-
-
-    2. git add  
+   2. git add  
         - 将文件添加到暂存区
         - git add 文件名(带后缀)(对单个文件操作)
         - git add -A 批量添加
         - 在这个命令执行后一般不会提示信息，说明添加成功（Unix的哲学是“没有消息就是好消息”）
     3. git commit -m '写明改动内容' 
+        
         - 将代码提交仓库区
     4. 将本地库和远程库建立链接
+        
         - git remote add origin git@github.com:你的github账户名/你的远程库的名称.git
     5. 将本地仓库的代码提交到远程库
+        
         - git push -u origin（远程库别名） master（要上传的本地分支名）
     6. git ls-files 查看暂存区的内容
     7. git status 版本状态查看
@@ -108,10 +109,10 @@
         On branch master 当前的分支位置
         nothing to commit, working tree clean 工作树上没有需要提交的文件
         ```
-
+   
         - 红色表明此修改仅存在于工作区
         - 绿色表明此修改存在于工作区和暂存区
-
+   
     8. git restore --staged 文件名 从暂存区中移出
     9. git restore 文件名 擦除修改
     10. git diff 查看工作区和暂存区的差异
@@ -153,6 +154,7 @@
 
 ## 三. GitHub
 1. 介绍
+   
     - GitHub 是一个Git仓库管理网站,可以创建远程中心仓库,为多人合作开发提供便利.
 2. 操作流程
     1. 本地创建仓库,并做初始化提交

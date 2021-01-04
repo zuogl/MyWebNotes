@@ -42,7 +42,6 @@ console.log（s7）;//Set(4) {{…}, {…}, Array(3), "我是字符串呀"，4}
 ```js
 s7.delete(4)//删除
 console.log(s7.delete(1));//false
-
 ```
 5. 判断某个数据是否在集合中(.has())
 ```js
