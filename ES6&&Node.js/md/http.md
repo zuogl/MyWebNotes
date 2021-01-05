@@ -255,6 +255,20 @@ require('http')
 - get请求大小有限制，一般为2k,而post请求则没有大小限制
 - get类型报文请求方法的位置为get，post类型报文请求方法为post
 
+### 发送get和post请求的情况总结
+1. 发送get请求的情况
+    - 地址栏输入url敲回车
+    - 点击a链接
+    - link标签获取css资源的请求
+    - script标签获取js资源的请求
+    - img标签获取图片资源的请求
+    - iframe标签
+    - form表单，method为get时
+    - AJAX get请求
+2. post请求
+    - form表单，method为post时发送的请求
+    - AJAX post请求
+
 ## 根据请求路径，获取文件路径
 ```js
 let pathname = url.parse(request.url,true).pathname;

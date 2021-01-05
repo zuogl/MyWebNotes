@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            outline: none;
+        }
+        form{
+            position: relative;
+            width: 240px;
+            text-align: center;
+            left: 0;
+            right: 0;
+            margin: 200px auto;
+            /* margin-top: 200px; */
+
+        }
+        input{
+
+            float: right;
+        }
+
+    </style>
+</head>
+
+<body>
+    <form action="http://127.0.0.1/login" method="POST">
+        <label for="username">用户名</label>
+        <input type="text" name="username" id="username" autocomplete="off"><br>
+        <label for="password">  密码</label>
+        <input type="text" name="password" id="password" autocomplete="off" ><br>
+
+        <button style="margin-top: 20px;">提交</button>
+    </form>
+</body>
+
+</html>
