@@ -8,12 +8,13 @@ fs.writeFile(file, data, [,options], callback)
 ```
 `file`:要将文件写到哪儿去（可以是相对路径，也可以是绝对路径）
 `data`:写入的内容
-`[,options]`:可选参数；配置参数 {flag:'a'}
+`[,options]`:可选参数；配置参数 {flag:'a'}，a代表追加
 `callback`:回调函数
+
 ##### 2. 具体流程
 1. 引入 fs模块
 ```js
-const fs = require('fs')；//固定写法，建议同一写成这句话
+const fs = require('fs')；//固定写法，建议统一写成这句话
 ```
 2. 调用fs中的方法完成写入
 fs 的路径是参照于执行命令的，所以为了在我们期望的位置实现效果，通常建议将路径设置为绝对路径。
@@ -25,7 +26,7 @@ fs.writeFile(__dirname + '/index.html','面子都是互相给的','function(err)
         console.log('写入失败')
         return
     }else{
-        console.log('写入失败')
+        console.log('写入成功')
     }
 }')
 ```
@@ -36,7 +37,7 @@ fs.writeFile('./index.html','面子都是互相给的','function(err){
         console.log('写入失败')
         return
     }else{
-        console.log('写入失败')
+        console.log('写入成功')
     }
 }')
 ```
