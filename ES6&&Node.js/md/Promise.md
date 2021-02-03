@@ -121,7 +121,7 @@ console.log(222);
 ```js
 function fn() {
     console.log(11111111);
-    // try是捕获不到语法错误
+    // try是捕获不到语法错误的
     try{
         const a = null
         a.userName = "laoli";
@@ -284,7 +284,7 @@ p1.then(undefined,reason =>{
 ```
 #### 4. Promise.resolve()
 返回一个成功/失败的promise对象
-- 出入非Promise,返回一个成功状态的Promise，value就是出入的值。
+- 传入非Promise,返回一个成功状态的Promise，value就是出入的值。
 ```js
 const p1 = Promise.resolve(1);
 console.log(p1);//Promise { 1 }
@@ -349,9 +349,9 @@ console.log(p2);//Promise { <rejected> Promise { '异常' } }
 p2.catch(reason => {
     console.log(reason);//Promise { '异常' }
     reason.then(value=>{
-        console.log(value)
+        console.log(value);//异常
     },reason => {
-        console.error(reason);//异常
+        console.error(reason);
     })
 })
 ```
@@ -427,10 +427,11 @@ p1.catch(err=>{
     console.log(err);//异常
 })
 ```
-#### 2. 一个promise指定多个成功/失败回调函数, 当promise改变为对应的状态时，都会调用吗。
+#### 2. 一个promise指定多个成功/失败回调函数, 当promise改变为对应的状态时，都会调用。
 
 #### 3.改变promise状态和指定回调函数谁先谁后?
 **都有可能**，正常情况下是先指定回调再改变状态，但是也可以先改变状态在指定回调
+
 - 如何先改状态再指定回调?
 1. 在执行器中直接调用resolve()/reject()
 ```js
@@ -484,12 +485,14 @@ p2.then(value=>{
     console.log(value);//12345
 })
 ```
-- 如果返回的是另一个新promise, 此promise的结果就会成为新promise的结果
+- 如果返回的是另一个新promise, 此promise的结果就会成为新promise的结果,但是注意这两个promise不是全等的。
 ```js
+const p = Promise.reject(1);
 const p2 = p1.then(value=>{
-    return Promise.reject(1);
+    return p;
     })
 console.log(p2);//Promise { <rejected> '1' }
+console.log(p2===p);//false
 
 // **************************************
 const p2 = p1.then(value=>{

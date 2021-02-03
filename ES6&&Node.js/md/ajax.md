@@ -92,7 +92,7 @@ ajax具有如下优缺点：
   ```
 
 #### 6. xhr.onreadystatechange = function(){}
-  这是一个监控整个ajax生命周期的函数，数生命周期的状态发生改变时会自动执行；同时也可以接收数据，如果仅仅用于接收数据并对数据进行处理的话，相当于xhr.onload。
+  这是一个监控整个ajax生命周期的函数，当生命周期的状态发生改变时会自动执行；同时也可以接收数据，如果仅仅用于接收数据并对数据进行处理的话，相当于xhr.onload。
   ```js
 
         xhr.onreadystatechange = function () {
@@ -127,7 +127,7 @@ ajax具有如下优缺点：
 
   ```
 
-#### 7. 指定响应的格式--xhr.responseTtpe
+#### 7. 指定响应的格式--xhr.responseType
   ```js
     xhr.responseType = 'text';//默认格式为text格式，可以修改成json等其他格式。
   ```
@@ -230,7 +230,6 @@ xhr.timeout = 1000;
     <button>getJSON</button>
     <button>jsonp</button>
 
-
     <script>
     // 第一种方式
         $("button").eq(0).click(function () {
@@ -239,7 +238,7 @@ xhr.timeout = 1000;
             a:1,
             b:2
         },function (res) {
-            这个res就是服务端返回的数据
+            //这个res就是服务端返回的数据
             console.log(res);
         },"text")
         })
@@ -348,7 +347,7 @@ xhr.open("get","http://127.0.0.1/test?t="+Date.now());
 ```
 
 #### 3. 数组的map方法
-  map时es6提供的一个关于数组扩展的方法，通过该方法可以映射出来一个新的数组。
+  map是es6提供的一个关于数组扩展的方法，通过该方法可以映射出来一个新的数组。
   ```js
     const hobbyEnum = {
     "1":"学习",
@@ -363,7 +362,7 @@ xhr.open("get","http://127.0.0.1/test?t="+Date.now());
     <!-- 最后处理的之所以不是一个数组，是因为.join将其转化成字符串了。 -->
   ```
 #### 4. 数组的filter方法
-  返回一个符合筛选条件的数据组成的新的数组。
+  返回一个符合筛选条件的数据组成的新的数组。不改变原数组
   ```js
     const arr = [1, 2, 3, 4];
     console.log(arr.filter(v => v !== 1));//[2,3,4]
@@ -380,7 +379,6 @@ xhr.open("get","http://127.0.0.1/test?t="+Date.now());
 ```js
 const obj = {
   userName:"张三"
-
 }
 delete obj.userName;//删除userName属性
 ```

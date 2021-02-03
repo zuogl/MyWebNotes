@@ -152,7 +152,7 @@ class Phone{
 class SmartPhone extends Phone{
     // 构造方法 
     constructor(brand,price,pixel,screen){
-    //    调用父类的方法 
+    //   继承父类的属性
         super(brand,price)；
         // 初始化子类的成员 
         this.pixel = pixel;

@@ -5,7 +5,7 @@ storage可以分为==两类==：
     - localStorage:本地存储；永久性存储，直到被手动清除。
     - sessionStorage:会话存储，当浏览器关闭时，存储的数据就会被清除。
 ### 2. storage的方法
-> ==以下方法全部使用于`localStorage`和`sessionStorage`两种数据==
+> == 以下方法全部使用于`localStorage`和`sessionStorage`两种数据 ==
 #### 1. 设置storage的方法
 归根到底，storage还是window下的一个对象。所以可以使用对象添加属性的方式进行设置。包括`.`和`[]`；同时storage还提供了一个方法`setItem(key,value)`,如果key已经存在，将会进行更新。
 ```js
